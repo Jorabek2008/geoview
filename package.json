@@ -11,6 +11,16 @@
     "prepare": "husky install",
     "lint-staged": "lint staged"
   },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
