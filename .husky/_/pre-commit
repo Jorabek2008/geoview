@@ -1,0 +1,9 @@
+#! /bin/sh
+
+echo "Ogohlantirish: Siz commit qilishdan oldin kodlaringizni tekshiryapsizmi?"
+read -p "Agar tayyor bo'lsangiz Y ni bosing, aks holda N ni bosing (y/n): " yn
+case $yn in
+    [Yy]* ) exit 0;;
+    [Nn]* ) echo "Commit to'xtatildi."; exit 1;;
+    * ) echo "Faqat Y yoki N ni kiriting."; exit 1;;
+esac
