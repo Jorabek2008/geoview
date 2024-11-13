@@ -1,11 +1,13 @@
-import React from 'react';
+import { Routes } from 'react-router-dom';
 import './css/index.css';
+import { AppRouter, ROUTES } from './router';
+import React from 'react';
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <div>
-      <h1 className='text-3xl font-bold underline'>Hello adsc world!</h1>
-    </div>
+    <Routes>
+      {AppRouter(ROUTES.map((route) => ({ ...route, children: [] })))}
+    </Routes>
   );
 };
 
